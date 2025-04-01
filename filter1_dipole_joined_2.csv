@@ -1,0 +1,45 @@
+Candidate #,Frequency (cm-1),Name,Formula,mode number,Symmetry,IR Intensity,Raman Activity,Dipole Moment
+20,1202,Norbornene,C7H10,12,A',1.1,,
+27,1203,Ethylbenzene,C6H5CH2CH3,37,"A""",0.0,,
+29,1203,Alanine,CH3CH(NH2)COOH,17,A,7.9,,5.56
+48,1205,"Cyclobutane, methylene-",C5H8,11,A',0.2,,
+68,1206,toluene,C6H5CH3,30,"A""",0.0,,
+89,1208,"Propane, 1,2-dichloro-",CH2ClCHClCH3,14,A,25.5,,
+93,1209,Furazan,C2H2N2O,13,B2,2.6,1.0,
+104,1210,Coronene,C24H12,4,A1g,0.0,,
+105,1210,"1-Propene, 3-chloro-",C3H5Cl,11,A,0.6,,2.422
+115,1211,Pyrene,C16H10,8,Ag,0.0,,
+125,1212,Pyridine,C5H5N,6,A1,5.2,,
+195,1219,"2-Oxetanone, 4-methylene-",C4H4O2,10,A,4.3,,
+247,1223,"1,3-difluoropropane",CH2FCH2CH2F,8,A,1.5,8.3,
+255,1224,Oxepane,C6H12O,29,A,3.9,1.9,
+367,1236,Butanamide,C4H9NO,21,A,1.2,,3.763
+418,1239,meta-xylene,CH3C6H4CH3,18,A',0.4,,
+453,1242,Norbornadiene,C7H8,24,B1,0.0,,
+458,1242,(Z)-1-Chloro-2-fluoroethene,CHFCHClz,5,A',39.0,,
+469,1243,"Ethane, 1,1,2-trichloro-1,2,2-trifluoro-",CF2ClCFCl2,2,A,198.9,,
+485,1244,nitramide,NH2NO2,10,"A""",105.4,,
+543,1249,"Urea, N,N'-dimethyl-",NH(CH3)CONH(CH3),27,B,266.6,,3.825
+558,1251,"1,2-Ethanedithiol",CH2SHCH2SH,21,Bu,77.4,,2.379
+584,1253,Nitrous oxide,N2O,2,Σ,164.9,5.7,0.701
+596,1254,"1-Butene, 3-chloro-",CH2CHCHClCH3,15,A,44.0,,2.528
+597,1254,1-Fluoropropane,CH2FCH2CH3,16,A,1.6,,1.925
+611,1255,Ethanol,CH3CH2OH,9,A',121.7,4.4,1.477
+628,1256,Chloric Acid,HClO3,2,A',73.0,,1.908
+633,1257,trifluoroacetyl chloride,CF3COCl,11,"A""",313.5,,0.923
+643,1258,Chloroform,CHCl3,4,E,39.7,6.9,1.353
+1087,1294,Formic acid,HCOOH,5,A',21.4,0.7,5.463
+1159,1299,methyl germane,GeH3CH3,3,A1,2.0,,0.794
+1293,1307,Isodiazene,H2NN,6,B2,1.5,5.7,3.511
+1294,1307,perchloric acid,HClO4,2,A',191.4,,3.034
+1332,1310,"Ethene, fluoro-",CH2CHF,6,A',1.3,,1.528
+2401,1404,"Propane, 2,2-dichloro-",CH3CCl2CH3,24,B2,7.1,3.1,
+3177,1454,Propadienal,C3H2O,4,A1,7.1,14.8,
+5186,1652,Ammonia Dimer,NH3NH3,16,Bu,30.7,,
+5646,1925,Carbonyl fluoride,FCO,1,A',355.4,,1.274
+5789,2183,(trichloromethyl)silane,SiH3CCl3,1,A1,71.0,,2.469
+5827,2253,Aluminum monocyanide,AlCN,1,Σ,53.3,65.6,3.278
+5844,2304,hydrogen diselenide,H2Se2,1,A,18.0,194.5,1.066
+6013,2750,Methylidyne,CH,1,Σ,172.7,130.5,1.582
+10270,3624,Selenic acid,H2SeO4,9,B,374.0,,2.845
+10302,3664,Sulfur Hydroxide,SOH,1,A',122.7,78.9,1.76
