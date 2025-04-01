@@ -1,0 +1,128 @@
+Candidate #,Frequency (cm-1),Name,Formula,mode number,Symmetry,IR Intensity,Raman Activity,Dipole Moment,Quadrupole Moment,Melting Temperature [K]
+16,1202,2-Pyrrolidinone,C4H7NO,18,A,0.4,,5.057,5.466,25.0
+18,1202,Fluorobenzene,C6H5F,26,B2,0.0,,1.676,-1.587,-44.0
+24,1203,Diethylhydroxylamine,C4H11NO,14,A',2.4,,2.533,1.112,-26.0
+27,1203,Ethylbenzene,C6H5CH2CH3,37,"A""",0.0,,,,-95.0
+34,1204,phenyl cyanide,C6H5CN,28,B2,2.7,,4.853,-12.582,-13.0
+43,1205,Cyclobutanone,C4H6O,24,B2,2.5,,0.958,3.127,-50.9
+52,1205,methyl acetate,CH3COOCH3,11,A',4.3,,1.869,1.939,-98.0
+60,1206,Butanoic acid,C4H8O2,20,A,150.7,,2.134,1.477,-5.1
+66,1206,Cyclopentanone,C5H8O,10,A,0.3,,3.011,1.274,-58.2
+68,1206,toluene,C6H5CH3,30,"A""",0.0,,,,-95.0
+75,1207,Cyclopentanol,C5H10O,23,A,32.6,,2.911,2.993,-19.0
+87,1208,Anisole,C6H5OCH3,16,A',33.5,,1.351,-9.176,-37.0
+98,1209,Hexanoic acid,C6H12O2,42,"A""",0.2,,1.959,0.673,-3.4
+109,1210,1-Pentanol,C5H12O,18,A',63.3,,1.636,-0.763,-78.0
+118,1211,furfural,C5H4O2,11,A',20.0,5.3,1.76,12.644,-37.0
+125,1212,Pyridine,C5H5N,6,A1,5.2,,,,-41.63
+129,1212,acetophenone,CH3COC6H5,17,A',4.0,,3.25,-4.632,19.0
+145,1214,1-Butanethiol,C4H9SH,31,"A""",0.2,,1.922,-0.786,-115.8
+188,1218,benzaldehyde,C6H5CHO,14,A',15.6,1.8,3.477,-3.505,-57.12
+200,1219,Indene,C9H8,17,A',1.5,,,5.468,-1.8
+210,1220,cyclohexanone,C6H10O,36,"A""",32.9,,3.389,5.839,-47.0
+211,1220,Nitrobenzene,C6H5NO2,31,B2,15.8,,5.075,-5.202,5.7
+223,1222,Pentanenitrile,C5H9N,31,"A""",0.0,,4.362,,-96.2
+232,1222,n-propyl bromide,CH3CH2CH2Br,22,"A""",0.5,,2.558,-0.485,-110.5
+244,1223,aniline,C6H5NH2,27,"A""",5.8,,1.738,-4.472,-6.3
+268,1226,triethylamine,C6H15N,32,E,19.4,,0.723,,-114.7
+282,1228,1-Propanol,C3H7OH,18,A,67.7,3.2,1.354,-1.116,-126.0
+304,1230,1-Propanethiol,C3H7SH,24,"A""",0.6,,1.799,-2.505,-113.0
+364,1235,monoethanolamine,HOCH2CH2NH2,15,A,37.3,,3.267,0.724,10.3
+389,1238,"1,3-Propanedithiol",C3H8S2,29,B2,26.1,,3.155,2.244,-79.0
+407,1239,"1,2-Diaminopropane",C3H10N2,21,A,0.6,,2.441,,-37.1
+418,1239,meta-xylene,CH3C6H4CH3,18,A',0.4,,,,-48.0
+422,1239,Butanal,CHOCH2CH2CH3,26,"A""",0.0,,1.761,-3.254,-96.86
+435,1240,Ethyl formate,HCOOC2H5,11,A',551.7,1.3,1.869,1.939,-80.0
+446,1241,Butanenitrile,CH3CH2CH2CN,24,"A""",0.1,,4.264,6.464,-111.9
+453,1242,Norbornadiene,C7H8,24,B1,0.0,,,,-19.0
+523,1248,Diethyl sulfide,C2H5SC2H5,16,A2,0.0,,1.922,-0.786,-103.8
+576,1253,Acetylacetone,C5H8O2,10,A,30.0,,1.828,5.012,-23.0
+607,1255,"1,2-dichlorobenzene",C6H4Cl2,25,B2,4.5,,3.163,4.815,-17.03
+654,1259,Isopropyl alcohol,CH3CHOHCH3,17,A,87.1,,1.354,-1.116,-89.0
+666,1260,2-Butenal,CHOCHCHCH3,12,A',0.4,,0.958,3.127,-76.5
+738,1267,Tetraborane(10),B4H10,31,B2,1.8,,0.611,-2.035,-120.8
+750,1267,2-Butanone,CH3COCH2CH3,26,"A""",0.2,,1.761,-3.254,-86.0
+859,1277,Ethylenediamine,C2H8N2,20,Bg,0.0,,1.661,-4.738,8.0
+865,1277,Divinyl sulfide,CH2CHSCHCH2,20,B,24.7,,1.487,,20.0
+1126,1297,2-Propanethiol,CH3CHSHCH3,9,A',17.7,,1.799,-2.505,-130.7
+1409,1316,chlorobenzene,C6H5Cl,25,B2,0.4,,2.147,0.447,-45.58
+1449,1319,bromobenzene,C6H5Br,25,B2,1.4,,2.12,3.9,-30.8
+1465,1321,phenylacetylene,C6H5CCH,29,B2,0.2,,4.876,11.083,-45.0
+1827,1359,dimethyl trisulfide,CH3SSSCH3,6,A,1.1,,1.443,-3.903,-68.05
+3,1201,"Propane, 2-methoxy-",C4H10O,23,A,81.6,,1.242,-1.582,
+4,1201,"Thiophene, 2,3-dihydro-",C4H6S,13,A,2.3,,1.487,-2.954,
+5,1201,2(5H)-Pyridinone,C5H5NO,22,"A""",0.0,,1.075,-5.168,
+15,1202,"2-Propenoic acid, methyl ester",C4H6O2,15,A,38.6,,1.637,-3.902,
+32,1204,"2,5-dihydrothiophene-3-ol",C4H6OS,13,A,22.5,,3.831,8.361,
+42,1205,"1,2,3-Propanetriol",C3H8O3,18,A,13.1,,2.261,-1.587,
+46,1205,Cyclopentanamine,C5H11N,36,"A""",0.0,,1.361,0.795,
+47,1205,1-Pentanethiol,C5H12S,38,"A""",0.2,,1.735,-2.235,
+48,1205,"Cyclobutane, methylene-",C5H8,11,A',0.2,,,,
+51,1205,Calicene,C8H6,30,B2,3.6,,4.876,11.083,
+58,1206,Cyclopropylamine,C3H7N,8,A',0.7,,1.416,0.437,
+62,1206,"Pentane, 1-chloro-",C5H11Cl,36,"A""",0.1,,2.605,4.813,
+73,1207,1-Chloro-2-ethoxyethane,C4H9ClO,31,"A""",7.5,,,2.408,
+80,1208,"1-Propanamine, 2-methyl-",C(NH2)H2C(CH3)HCH3,24,A,0.1,,0.999,0.719,
+84,1208,(E)-3-Pentenenitrile,C5H7N,17,A,0.0,,4.445,6.938,
+86,1208,orthodifluorobenzene,C6H4F2,26,B2,42.6,,2.841,-0.836,
+89,1208,"Propane, 1,2-dichloro-",CH2ClCHClCH3,14,A,25.5,,,,
+102,1210,1-Butanamine,C(NH2)H2CH2CH2CH3,34,"A""",0.0,,0.999,0.719,
+116,1211,"2-Methyl-1,2-propanediamine",C4H12N2,15,A',33.0,,2.017,-3.718,
+123,1212,"Carbonochloridic acid, ethyl ester",C3H5ClO2,13,A,671.9,,4.353,3.393,
+149,1215,"1,3-Dioxolane",C3H6O2,8,A,85.1,,1.869,1.939,
+154,1215,"Butane, 1-chloro-",CH2ClCH2CH2CH3,29,"A""",0.2,,2.486,1.238,
+182,1218,"Thiophene, tetrahydro-3-methyl-",C5H10S,22,A,2.0,,1.86,-5.977,
+230,1222,"1-Propanethiol, 2-methyl-",CH2(SH)CH(CH3)CH3,21,A,4.3,,1.922,-0.786,
+233,1222,1-Propanamine,NH2CH2CH2CH3,27,"A""",0.0,,0.744,-3.485,
+247,1223,"1,3-difluoropropane",CH2FCH2CH2F,8,A,1.5,8.3,,,
+255,1224,Oxepane,C6H12O,29,A,3.9,1.9,,,
+278,1227,"2,4-Cyclohexadienone",C6H6O,13,A',24.5,,4.709,,
+313,1230,β–alanine,NH2CH2CH2COOH,17,A,54.9,,5.56,7.727,
+325,1231,Vinyl ether,CH2CHOCHCH2,13,A,353.5,,0.958,3.127,
+326,1231,"Propane, 1-chloro-",CH2ClCH2CH3,22,"A""",0.4,,2.519,0.95,
+361,1235,2-Butanamine,CH3C(NH2)HCH2CH3,24,A,0.8,,0.999,0.719,
+369,1236,(E)-1-Chloro-1-butene,CHClCHCH2CH3,16,A,9.3,,2.528,2.792,
+373,1237,Diethyl sulfoxide,C4H10OS,22,A,0.6,,4.57,1.863,
+378,1237,"Ethane, methoxy-",CH3OC2H5,12,A',81.9,,1.354,-1.116,
+392,1238,4-Methylthiazole,C4H5NS,12,A,1.5,,1.133,-4.328,
+394,1238,Cyclobutanol,C4H8O,26,"A""",0.3,,1.761,-3.254,
+420,1239,2-Propanamine,CH3CH(NH2)CH3,27,"A""",0.1,,0.744,-3.485,
+440,1241,"Thiophene, 3-methyl-",C5H6S,11,A',3.9,,0.933,-7.409,
+445,1241,"Propane, 2-chloro-2-methyl-",CH3CCl(CH3)CH3,19,E,5.1,,2.486,1.238,
+447,1241,i-propyl bromide,CH3CHBrCH3,8,A',69.0,,2.558,-0.485,
+466,1243,Benzene trifluoride 123,C6H3F3,6,A1,43.2,,3.25,3.852,
+470,1243,"1-Butene, 4-chloro-",CH2CHCH2CH2Cl,15,A,0.1,,2.528,2.792,
+473,1244,(E)-Azodioxymethane,C2H6N2O2,26,Bu,303.6,,4.853,1.795,
+487,1245,"Isoxazole, 5-methyl-",C4H5NO,12,A,34.7,,3.43,-2.627,
+511,1247,"1H-Imidazole, 2-methyl-",C4H6N2,14,A,15.0,,3.721,-5.778,
+524,1248,(Methylsulfonyl)ethane,C3H8O2S,18,A,15.1,,5.209,-5.728,
+543,1249,"Urea, N,N'-dimethyl-",NH(CH3)CONH(CH3),27,B,266.6,,3.825,-3.776,
+550,1250,"Ethane, (methylthio)-",CH3SCH2CH3,24,"A""",0.0,,1.799,-2.505,
+559,1251,"Butane, 2-chloro-",CH3CHClCH2CH3,20,A,19.0,,2.486,1.238,
+570,1252,phenyl,C6H5,24,B2,0.1,,0.691,1.17,
+596,1254,"1-Butene, 3-chloro-",CH2CHCHClCH3,15,A,44.0,,2.528,2.792,
+597,1254,1-Fluoropropane,CH2FCH2CH3,16,A,1.6,,1.925,1.439,
+602,1255,Propyl nitrite,C3H7ONO,17,A,3.3,,5.56,7.727,
+626,1256,dimethyl hydrazine,CH3NHNHCH3,9,A,17.1,,1.661,-4.738,
+631,1257,s-Ethyl thioacetate,C4H8OS,18,A,0.0,,4.647,2.129,
+642,1258,2-Butanethiol,CH3CH(SH)CH2CH3,21,A,4.8,,1.922,-0.786,
+716,1264,Propanoic Acid,CH3CH2COOH,21,"A""",0.1,,1.869,1.939,
+787,1269,Carbonothioic dihydrazide,CH6N4S,14,A,140.4,,7.615,-4.384,
+840,1274,"1-Butene, 2-chloro-",CH2CClCH2CH3,23,"A""",0.5,,2.528,2.792,
+848,1276,"Nitric acid, ethyl ester",C2H5NO3,21,"A""",1.3,,4.128,4.266,
+866,1277,"2-Butene, 1-chloro-",CH2ClCHCHCH3,15,A,59.1,,2.528,2.792,
+877,1278,"Propane, 2-(methylthio)-",CH3C(SCH3)HCH3,21,A,39.3,,1.922,-0.786,
+921,1282,"Propane, 2-chloro-",CH3CHClCH3,8,A',51.1,7.6,2.519,0.95,
+937,1283,"Urea, ethyl-",NH2CONHC2H5,18,A,5.0,,3.825,-3.776,
+958,1285,"Ethene, ethoxy-",C2H3OC2H5,17,A,1.2,,1.761,-3.254,
+959,1285,3-Aminopropionitrile,C3H6N2,21,"A""",0.1,,4.093,9.538,
+1008,1288,"1-Propene, 2-methoxy-",CH2C(CH3)OCH3,17,A,189.4,,,-3.254,
+1067,1292,Urethane,NH2COOC2H5,16,A,1.3,,5.56,,
+1248,1304,"Propanal, 2-methyl-",CHOCH(CH3)CH3,11,A',3.5,,1.761,-3.254,
+1291,1307,"2-Butene, 2-chloro-, (Z)-",CH3CClCHCH3,11,A',30.0,,2.528,2.792,
+1416,1316,"Propanenitrile, 2-methyl-",CH3CH(CH3)CN,24,"A""",0.3,,4.264,6.464,
+1716,1348,pentaborane9,B5H9,8,A2,0.0,,2.238,-0.69,
+1766,1353,Isopropyl nitrite,CH3CH(CH3)ONO,16,A,9.0,,5.56,,
+1864,1363,2-Fluoropropane,CH3CHFCH3,22,"A""",6.0,2.7,1.925,1.439,
+2125,1387,"Urea, methyl-",C2H6N2O,13,A,213.5,,4.26,-2.583,
+3131,1451,"Sulfurous acid, dimethyl ester",C2H6O3S,12,A,1.5,,2.08,-4.784,
