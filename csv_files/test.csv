@@ -1,0 +1,167 @@
+﻿Candidate #,Frequency (cm-1),Name,Formula,mode number,Symmetry,IR Intensity,Raman Activity,Dipole Moment,Quadrupole moment,No Point Group Found
+36,1204,"Methane, bromodichloro-",CHBrCl2,2,A',52.9,6.5,1.26,-1.931,Cs
+53,1205,monomethyl copper,CuCH3,2,A1,62.1,,3.525,1.046,C3v
+70,1206,hydrogen thioperoxide,HOSH,3,A,61.9,,1.943,-1.821,C1
+120,1211,Chloromethylene,HCCl,2,A',7.9,,1.66,1.782,Cs
+128,1212,chlorofluoromethylene,CFCl,1,A',306.5,,0.533,2.302,Cs
+156,1215,Sulfur imide,HNS,2,A',60.3,,1.707,1.258,Cs
+192,1218,Chloryl fluoride,ClO2F,5,"A""",291.2,,2.33,-3.918,Cs
+203,1219,thionyl chloride,SOCl2,1,A',302.6,,2.104,0.827,Cs
+218,1221,Sulfur dioxide,SO2,1,A1,63.8,28.0,2.186,1.467,C2v
+231,1222,dibromomethane,CH2Br2,8,B2,104.0,,1.744,3.612,C2v
+300,1229,Fluoromethylene,HCF,2,A',112.7,2.6,1.471,2.153,Cs
+301,1229,Disulfur monoxide,SSO,1,A',276.7,34.6,1.908,4.146,Cs
+311,1230,Hydrogen sulfide,H2S,2,A1,8.8,45.9,1.413,0.663,C2v
+329,1232,Beryllium Carbonate,BeCO3,7,B2,609.1,,7.362,11.401,C2v
+370,1236,Hydrogen phosphorus oxide,HPO,2,A',89.0,,2.705,3.722,Cs
+379,1237,fluorochlorobromomethane,CHFClBr,3,A,114.8,4.2,1.439,2.451,C1
+506,1246,ethynol,HCCOH,4,A',141.4,,1.632,-1.617,Cs
+530,1248,fluorochloromethane,CH2FCl,8,"A""",4.3,,2.143,1.143,Cs
+571,1252,Nitrosamide,NH2NO,5,A,129.1,,3.587,-1.335,C1
+584,1253,Nitrous oxide,N2O,2,Σ,164.9,5.7,0.701,-4.271,C∞v
+613,1255,monofluoroamine,NH2F,3,A',94.9,,2.542,1.841,Cs
+627,1256,Phosphine oxide,H3PO,2,A1,322.8,,4.176,-3.822,C3v
+628,1256,Chloric Acid,HClO3,2,A',73.0,,1.908,-6.779,Cs
+643,1258,Chloroform,CHCl3,4,E,39.7,6.9,1.353,2.812,C3v
+663,1260,methyleneborane,CH2BH,4,A1,0.0,,0.738,2.026,C2v
+665,1260,Dioxirane,CH2O2,8,B2,1.5,,5.463,-0.979,C2v
+690,1262,Phosphorus monoxide,PO,1,Σ,68.4,,2.592,-2.492,C∞v
+720,1265,vinyl,C2H3,5,A',3.4,,0.586,-2.74,Cs
+727,1265,Chlorous acid,HOClO,2,A,63.1,,3.227,1.573,Cs
+729,1265,Silicon monoxide,SiO,1,Σ,89.0,15.7,3.251,-5.322,C∞v
+748,1267,"Methane, difluoro-",CH2F2,5,A2,0.0,12.1,2.048,2.035,C2v
+894,1279,Lithium dioxide,LiO2,1,A1,1.3,448.9,6.137,9.264,C2v
+903,1280,hypochlorous acid,HOCl,2,A',47.9,2.2,1.825,-2.435,Cs
+912,1281,fluorodichloromethane,CHFCl2,7,"A""",97.1,,1.533,-1.027,Cs
+934,1283,Phosphoryl chloride,Cl3PO,1,A1,237.0,,2.533,-7.682,C3v
+955,1284,Cyanoimidogen,NCN,1,Σg,0.0,,0.801,-5.263,D∞h
+957,1284,Phosphorus oxide phosphide,PPO,1,Σ,274.4,,1.485,-6.382,C∞v
+1022,1289,Sodium superoxide,NaO2,1,A1,0.0,627.9,8.241,5.565,C2v
+1176,1300,Phosphorus oxychloride,OPCl,1,A',168.1,,2.368,4.871,Cs
+1194,1301,Formyl bromide,COHBr,3,A',117.9,,2.098,0.82,Cs
+1245,1304,Methylene chloride,CH2Cl2,8,B2,73.5,1.9,1.993,3.275,C2v
+1247,1304,"Methane, bromodifluoro-",CHBrF2,2,A',155.2,,1.565,-2.945,Cs
+1249,1304,Thiazyl fluoride,FSN,1,A',18.3,,1.405,2.302,Cs
+1321,1310,boron monocarbide,BC,1,Σ,0.4,,2.331,-2.834,C∞v
+1335,1310,Phosphorus dioxide,PO2,3,B2,146.7,,2.031,3.793,C2v
+1352,1311,Titanium monohydride,TiH,1,Σ,383.3,,1.88,-13.097,C∞v
+1394,1315,Carbonic difluoride,CF2O,5,B2,475.8,0.1,1.339,-3.696,C2v
+1420,1316,Thionyl Fluoride,F2SO,1,A',244.5,,2.217,0.798,Cs
+1459,1320,difluoramine,NHF2,2,A',57.7,,2.098,-2.37,Cs
+1476,1323,Boron monofluoride,BF,1,Σ,174.6,3.0,0.878,-4.253,C∞v
+1499,1325,Phosphaethyne,HCP,2,Σ,4.8,,0.683,3.965,C∞v
+1522,1327,Chromium hydride,CrH,1,Σ,497.9,,1.617,-12.07,C∞v
+1583,1333,methyl bromide,CH3Br,2,A1,46.5,,2.192,4.109,C3v
+1666,1342,Formyl chloride,COHCl,3,A',61.2,,2.198,1.309,Cs
+1667,1342,Hydrogen peroxide,H2O2,6,B,118.8,,4.052,1.766,C2h
+1705,1346,Methanimine,CH2NH,6,A',50.5,,3.294,-0.97,Cs
+1706,1346,difluorochloromethane,CHF2Cl,2,A',128.4,,1.648,-2.402,Cs
+1728,1348,Hydroxymethylidyne,COH,2,A',164.8,3.4,2.569,0.997,Cs
+1777,1354,Nitric acid,HNO3,4,A',172.1,,2.862,1.736,Cs
+1797,1356,thiomethoxy,CH3S,6,A,9.5,,1.751,1.781,C3v
+1840,1361,aminomethylene,CHNH2,6,A',49.7,8.5,3.294,-0.97,Cs
+1931,1368,Thioketene,CH2CS,3,A1,5.9,22.0,1.821,3.89,C2v
+1932,1368,sulfidoazane,NH3S,2,A1,76.8,,1.061,-1.154,C3v
+2022,1377,magnesium monohydride,MgH,1,Σ,277.6,,1.411,-8.821,C∞v
+2061,1381,Phosphoryl fluoride,F3PO,1,A1,314.9,,1.959,-5.407,C3v
+2088,1383,Methyl chloride,CH3Cl,2,A1,30.1,1.8,2.243,1.748,C3v
+2101,1384,formyl fluoride,HFCO,3,A',7.1,,2.391,1.908,Cs
+2139,1388,Nitryl chloride,ClNO2,1,A1,450.4,,1.642,1.106,C2v
+2159,1390,Sulfuryl chloride,SO2Cl2,8,B2,288.7,,2.154,-0.724,C2v
+2341,1401,Chlorine nitrate,ClONO2,2,A',379.6,,2.146,2.602,Cs
+2343,1402,Bromine nitrate,BrONO2,2,A',426.0,,1.484,1.577,Cs
+2480,1407,Fluorine nitrate,FNO3,2,A',291.0,,0.865,3.666,Cs
+2517,1408,Ketene,CH2CO,3,A1,15.0,2.7,1.632,-1.617,C2v
+2806,1423,"Methane, trifluoro-",CHF3,4,E,113.8,3.1,1.698,3.723,C3v
+2858,1428,Phosphorus mononitride,PN,1,Σ,0.2,34.7,2.921,-2.917,C∞v
+2931,1435,Hypofluorous acid,HOF,2,A',58.4,3.7,2.155,-1.594,Cs
+2944,1436,Nitrogen trioxide,NO3,1,A1,227.3,,1.241,-1.86,D3h
+2970,1439,Water-d1,HDO,3,A',90.5,,2.198,-2.153,Cs
+3027,1444,methyl lithium,CH3Li,5,E,4.9,,5.72,10.658,C3v
+3105,1449,Dinitrogen trioxide,N2O3,3,A',131.1,,1.969,5.445,Cs
+3117,1450,Phosphaethene,CH2PH,4,A',0.4,,1.289,-1.972,Cs
+4347,1483,Scandium monohydride,ScH,1,Σ,341.0,,1.317,-5.584,C∞v
+4559,1490,Thioformaldehyde,H2CS,2,A1,9.2,,2.232,3.16,C2v
+4667,1497,Nitrogen trifluoride oxide,F3NO,1,A1,682.5,,1.318,-2.687,C3v
+4862,1532,methyleneazane,HCNH,3,A',10.9,,2.408,-1.159,Cs
+4903,1562,lithium amide,LiNH2,2,A1,31.0,12.7,4.616,10.851,C2v
+4904,1565,beryllium oxide,BeO,1,Σ,107.8,,6.782,6.762,C∞v
+4929,1588,boron nitride,BN,1,Σ,26.8,,2.624,-0.921,C∞v
+4962,1603,Copper monohydride,CuH,1,Σ,420.3,,4.329,-2.246,C∞v
+4993,1608,chloramine,NH2Cl,2,A',28.6,8.0,2.299,0.92,Cs
+5023,1616,water oxide,H2OO,2,A',118.5,4.3,4.052,1.766,Cs
+5081,1628,Diazocarbene,CNN,1,Σ,0.7,141.4,0.801,-5.263,C∞v
+5231,1663,Ammonia,NH3,4,E,21.3,10.6,1.92,-2.815,C3v
+5249,1669,Nitrogen oxide sulfide,SNO,1,A',489.0,312.2,1.011,1.721,Cs
+5255,1671,3H-Diazirin-3-ylidene,CN2,1,A1,19.5,,0.801,-5.263,C2v
+5432,1755,aluminum dihydride,AlH2,1,A1,117.0,,0.674,-1.92,C2v
+5480,1791,Silicon dicarbide,SiC2,1,A1,45.4,37.2,2.454,-1.793,C2v
+5490,1798,Magnesium Carbonate,MgCO3,1,A1,699.3,,13.025,16.489,C2v
+5501,1803,Bromine nitrite,BrONO,1,A',304.0,,1.016,0.964,Cs
+5502,1803,Oxirene,C2H2O,2,A1,0.7,71.7,1.632,-1.617,C2v
+5549,1823,Nitrosyl nitrite,ONONO,7,B2,462.4,,1.969,5.445,C2v
+5552,1824,chlorine nitrite,ClONO,1,A',278.3,,1.642,1.106,Cs
+5605,1863,Boron dioxide,BO2,1,Σ,21.8,,1.826,-6.565,D∞h
+5609,1869,Phosgene,CCl2O,1,A1,452.1,,1.359,-3.968,C2v
+5613,1872,Mercapto-d,DS,1,Σ,8.2,,1.08,2.146,C∞v
+5614,1875,Carbonic dibromide,COBr2,1,A1,446.7,,1.38,-5.031,C2v
+5622,1882,Hydrogen sulfide-d2,D2S,1,A1,4.1,,1.414,0.662,C2v
+5633,1894,Nitrosyl chloride,ClNO,1,A',991.4,,1.836,1.0,Cs
+5638,1905,Nitrosyl fluoride,FNO,1,A',207.9,12.7,0.744,2.089,Cs
+5639,1907,Nitrosyl bromide,BrNO,1,A',1501.1,,2.171,-0.515,Cs
+5645,1922,Carbonic chloride fluoride,COFCl,1,A',530.2,,1.393,2.97,Cs
+5646,1925,Carbonyl fluoride,FCO,1,A',355.4,,1.274,2.331,Cs
+5655,1946,Tricarbon monoxide,C3O,2,Σ,184.8,,1.844,-8.761,Cs
+5656,1949,carbonyl monochloride,ClCO,1,A',524.5,,0.729,1.552,Cs
+5657,1950,fluorosilylene,HSiF,1,A',527.0,206.9,1.113,5.387,Cs
+5667,1984,silicon dihydride,SiH2,3,B2,437.3,,0.532,-4.676,C2v
+5673,1995,monofluorogermane,GeH3F,1,A1,25.0,221.3,2.141,-2.791,C3v
+5675,1996,Dicarbon monoxide,CCO,1,Σ,368.0,,1.419,-7.513,C∞v
+5681,2008,monobromosilylene,HSiBr,1,A',372.3,191.2,1.537,3.389,Cs
+5695,2054,Hydrochloric acid-d,DCl,1,Σ,12.5,,1.502,3.599,C∞v
+5699,2073,Aluminum isocyanide,AlNC,1,Σ,564.5,79.4,3.278,-12.539,C∞v
+5702,2076,hydrogen isocyanide,HNC,2,Σ,81.5,,3.209,2.033,C∞v
+5708,2081,lithium cyanide,LiCN,1,A',107.7,,7.586,12.599,Cs
+5713,2094,Sodium Cyanide,NaCN,1,A',66.3,,9.096,3.554,Cs
+5715,2100,methyl chloride d3,CD3Cl,1,A1,25.1,,2.243,1.749,C3v
+5754,2147,Cyanoacetylene,HCCCN,3,Σ,3.4,,4.091,1.906,C∞v
+5757,2150,bromoacetylene,HCCBr,2,Σ,11.4,,0.588,9.218,C∞v
+5778,2169,Chloroacetylene,HCCCl,2,Σ,22.0,,0.842,7.488,C∞v
+5784,2176,monofluorosilane,SiH3F,4,E,257.4,54.1,1.474,-1.142,C3v
+5788,2182,bromosilane,SiH3Br,1,A1,95.4,,1.767,2.972,C3v
+5799,2192,Hydrogen cyanide,HCN,2,Σ,11.8,39.5,3.209,2.033,C∞v
+5811,2219,dichlorosilane,SiH2Cl2,1,A1,114.3,,1.947,3.372,C2v
+5819,2229,difluorosilane,SiH2F2,6,B1,248.8,35.9,1.708,1.625,C2v
+5827,2253,Aluminum monocyanide,AlCN,1,Σ,53.3,65.6,3.278,-12.539,C∞v
+5830,2258,Boron monohydride,BH,1,Σ,391.1,,1.493,-4.062,C∞v
+5831,2259,Trichlorosilane,SiHCl3,1,A1,111.5,,1.363,4.008,C3v
+5836,2296,Selenium monohydride,HSe,1,Σ,24.4,172.1,0.728,2.606,C∞v
+5841,2300,trifluorosilane,SiHF3,1,A1,116.1,67.7,1.552,3.671,C3v
+5844,2304,hydrogen diselenide,H2Se2,1,A,18.0,194.5,1.066,-0.83,C2
+5854,2321,Hydrogen selenide,H2Se,1,A1,13.5,,0.958,1.218,C2v
+5857,2325,Cyanogen bromide,BrCN,1,Σ,31.9,62.7,3.194,-5.753,C∞v
+5863,2336,Phosphinous acid,H2POH,7,"A""",194.7,,4.176,-3.822,Cs
+5866,2338,Nitrogen sulfide,NNS,1,Σ,297.0,,1.322,0.953,C∞v
+5868,2339,chlorocyanogen,ClCN,1,Σ,49.4,,2.764,-4.18,C∞v
+5872,2340,Phosphine,PH3,3,E,146.9,159.3,0.881,-2.792,C3v
+5927,2423,Cyanogen fluoride,FCN,1,Σ,156.6,,1.803,-3.134,C∞v
+5950,2517,hydrogen bromide,HBr,1,Σ,8.7,,1.107,4.474,C∞v
+5967,2583,"Borane, dichloro-",BHCl2,1,A1,104.9,,0.939,0.988,C2v
+5977,2612,trisulfane,HSSSH,1,A,1.5,,0.749,-3.224,Cs
+6007,2686,hydrogen boron sulfide,HBS,1,Σ,50.0,61.5,2.193,3.435,C∞v
+6013,2750,Methylidyne,CH,1,Σ,172.7,130.5,1.582,-1.269,C∞v
+6239,2865,Hydrogen chloride,HCl,1,Σ,24.3,126.3,1.502,3.599,C∞v
+6905,2890,bromomethylene,CHBr,1,A',50.8,,1.555,1.335,Cs
+10314,3676,Hypobromous acid,HOBr,1,A',120.6,,1.704,-2.724,Cs
+345,1233,Hydroxyimidogen,NOH,2,A',44.8,,2.081,-0.819,Cs
+829,1273,Lithium Hydride,LiH,1,Σ,192.5,,5.981,-1.471,C∞v
+1087,1294,Formic acid,HCOOH,5,A',21.4,0.7,5.463,-0.979,Cs
+2921,1434,Zinc monohydride,ZnH,1,Σ,254.9,,0.858,-6.67,C∞v
+3126,1450,Nitrogen dioxide,NO2,1,A1,4.2,46.2,0.681,1.358,C2v
+3323,1460,Selenoformaldehyde,H2CSe,2,A1,7.1,3.5,1.978,5.128,C2v
+4902,1561,Nitrosyl hydride,HNO,3,A',39.1,,2.081,-0.819,Cs
+5421,1741,Calcium Carbonate,CaCO3,1,A1,814.2,,17.269,11.876,Cs
+5679,2006,Chlorosilylene,HSiCl,1,A',401.3,205.0,1.818,4.535,Cs
+9808,3081,bromoform,CHBr3,1,A1,2.5,,1.057,1.419,C3v
+157,1216,borohydride,BH4,3,A1,53.6,,1.152,1.192,D2d
+5719,2109,Zinc isocyanide,ZnNC,1,Σ,363.6,,4.711,-12.744,C∞v
