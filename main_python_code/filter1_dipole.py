@@ -90,9 +90,9 @@ def get_dipole_moment(formula): # define the function
         return None
 
 
-# this function loops over all the formulas present in the csv file with the initially filtered molecules and applies to all of them the get_dipole_moment function to retrieve their dipole moments
-# if the dipole moment is bigger than 0.2 then the molecule is kept if the dipole moment is smaller than 0.2 then the molecule is discarted
-# the function needs 3 inputs, the csv file where the molcular formulas are stored, the name and path where to store the filtered csv file and the delay time one should wait between processing two consecutive molecules to avoid overwhelming the server
+#this function loops over all the formulas present in the csv file with the initially filtered molecules and applies to all of them the get_dipole_moment function to retrieve their dipole moments
+#if the dipole moment is bigger than 0.2 then the molecule is kept if the dipole moment is smaller than 0.2 then the molecule is discarted
+#the function needs 3 inputs, the csv file where the molcular formulas are stored, the name and path where to store the filtered csv file and the delay time one should wait between processing two consecutive molecules to avoid overwhelming the server
 def filter_molecules_by_dipole(input_csv, output_csv_good, output_csv_no_value, output_csv_discarted, output_csv_joined, delay=1): # function definition
    
     # read the input CSV
@@ -155,4 +155,4 @@ def filter_molecules_by_dipole(input_csv, output_csv_good, output_csv_no_value, 
     print(f"Molecules with no dipole moment found: {len(filtered_molecules_no_value)}")
 
 # calling the filter_molecules_by_dipole function
-filter_molecules_by_dipole("molecule_filter_TOC/no_symmetry_restriction/filter1_dipole_no_values_2.csv", 'molecule_filter_TOC/no_symmetry_restriction/filter1_dipole_good_3.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_dipole_no_values_3.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_dipole_discarted_3.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_dipole_joined_3.csv')
+filter_molecules_by_dipole("molecule_filter_TOC/no_symmetry_restriction/csv_files/filter0_properties_no_symmetry_no_duplicates.csv", 'molecule_filter_TOC/no_symmetry_restriction/csv_files/filter1_again_good.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_no_values.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_discarted.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_joined.csv')
