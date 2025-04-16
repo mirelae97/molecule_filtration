@@ -1,14 +1,12 @@
 # import necessary libraries
-import requests # this is a library that allows to send HTTP requests to websites. Simulates what a browser does when fetching web content
-from bs4 import BeautifulSoup # from the bs4 module imports the class beautifulsoup. This is used to parse HTML or XML content and extract information from it
-import csv # this imports the csv module. It is used to read and write CSV files
-import pandas as pd # this imports the pandas library and it is giving it the alias pd that is used for data manipulation and analaysis
-import time # this imports the time module which is used to measure how long things run or to pause an execution
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import time
 
-
-# This function makes scraping to the CCCBDB database in order to get
-# the calculated dipole moment values
-def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
+# This function scrapes the CCCBDB database to get the rotational constants
+# from the cell with class "num bordered"
+def get_rotational_constants(formula, name=None, max_retries=3, retry_delay=2):
     import time
     import requests
     from bs4 import BeautifulSoup
@@ -24,7 +22,7 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 'cache-control': 'max-age=0',
                 'content-type': 'application/x-www-form-urlencoded',
                 'origin': 'https://cccbdb.nist.gov',
-                'referer': 'https://cccbdb.nist.gov/dipole1x.asp',
+                'referer': 'https://cccbdb.nist.gov/rotcalc1x.asp',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
             }
             
@@ -32,7 +30,7 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
             session = requests.Session()
             
             # Initial page visit
-            session.get('https://cccbdb.nist.gov/dipole1x.asp')
+            session.get('https://cccbdb.nist.gov/rotcalc1x.asp')
             
             # Post the form data to search for the formula
             response = session.post(
@@ -60,8 +58,8 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
             selection_table = soup.find('table', {'border': '1'})
             selection_form = soup.find('form', {'action': 'gotonex.asp'})
             
-            # Check if we're already on the dipole data page
-            dipole_table = soup.find('table', id='table2')
+            # Check if we're already on the rotational constants data page
+            rotational_table = soup.find('table', id='table2')
             
             # Determine current page
             if selection_table and selection_form:
@@ -150,12 +148,12 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                     timeout=30
                 )
                 
-                # Now we should be at dipole2x.asp
+                # Now we should be at the rotational constants page
                 soup = BeautifulSoup(response.text, 'html.parser')
                 
-            elif dipole_table:
-                print("Directly landed on dipole data page")
-                # We're already on the dipole data page, so no selection needed
+            elif rotational_table:
+                print("Directly landed on rotational constants data page")
+                # We're already on the rotational constants page, so no selection needed
                 pass
             else:
                 print(f"Landed on unrecognized page on attempt {attempt}")
@@ -166,12 +164,12 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 else:
                     return None
             
-            # At this point, we should be on the dipole data page
+            # At this point, we should be on the rotational constants page
             # Find table2 (in case we just refreshed the soup)
             table2 = soup.find('table', id='table2')
             
             if not table2:
-                print(f"Could not find dipole data table on attempt {attempt}")
+                print(f"Could not find rotational constants table on attempt {attempt}")
                 if attempt < max_retries:
                     print(f"Retrying in {retry_delay} seconds...")
                     time.sleep(retry_delay)
@@ -179,11 +177,11 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 else:
                     return None
             
-            # Look for HF method
-            hf_th = table2.find('th', class_='nowrap', string=lambda text: text and 'HF' in text)
+            # Look for the cell with class "num bordered"
+            bordered_cell = table2.find('td', class_='num bordered')
             
-            if not hf_th:
-                print(f"Could not find HF method row on attempt {attempt}")
+            if not bordered_cell:
+                print(f"Could not find cell with class 'num bordered' on attempt {attempt}")
                 if attempt < max_retries:
                     print(f"Retrying in {retry_delay} seconds...")
                     time.sleep(retry_delay)
@@ -191,19 +189,24 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 else:
                     return None
             
-            # Find the value cell
-            hf_td = hf_th.find_next('td', class_='num bordered')
-            
-            if hf_td and hf_td.a:
+            # Extract the values from the cell
+            # The values are separated by <BR> tags
+            if bordered_cell:
                 try:
-                    value = float(hf_td.a.text.strip())
+                    # Get the text content and split by line breaks
+                    cell_content = bordered_cell.get_text(separator='<BR>', strip=True)
+                    rotational_constants = cell_content.split('<BR>')
+                    
+                    # Convert to float values
+                    rot_constants = [float(val.strip()) for val in rotational_constants]
+                    
                     molecule_name = "unknown" if not 'selected_option' in locals() else selected_option['name']
-                    print(f"Dipole moment for {formula} ({molecule_name}): {value}")
-                    return value
+                    print(f"Rotational constants for {formula} ({molecule_name}): {rot_constants}")
+                    return rot_constants
                 except ValueError:
-                    print(f"Could not convert {hf_td.a.text} to float for {formula}")
+                    print(f"Could not convert {bordered_cell.text} to float values for {formula}")
             else:
-                print(f"Could not find dipole value for {formula}")
+                print(f"Could not find bordered cell for {formula}")
             
             if attempt < max_retries:
                 print(f"Retrying in {retry_delay} seconds...")
@@ -223,69 +226,58 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 return None
     
     return None
-    
 
-def filter_molecules_by_dipole(input_csv, output_csv_good, output_csv_no_value, output_csv_discarted, output_csv_joined, delay=1): # function definition
-   
-    # read the input CSV
+def extract_rotational_constants_to_csv(input_csv, output_csv, delay=1):
+    """
+    Extract rotational constants for molecules in the input CSV and save to output CSV.
+    
+    Parameters:
+    input_csv (str): Path to input CSV file containing molecule information
+    output_csv (str): Path to output CSV file to save the results
+    delay (int): Delay in seconds between requests to avoid overwhelming the server
+    """
+    # Read the input CSV
     df = pd.read_csv(input_csv)
     
-    # create arrays where to store the resulting molecules 
-    filtered_molecules_good = [] # here the molecules that pass the filter are stored
-    filtered_molecules_no_value = [] # here the molecules whose value could not be find are stored
-    filtered_molecules_discarted = [] # here the molecules that did not pass the filter are stored
-    filtered_molecules_joined = [] # here the combination of the molecules that passed the filter and whose value could not be find
-
-    # the csv I pass has multiple columns. Out of these the 4th contains the formulas 
-    for index, row in df.iterrows(): # iterate through the rows of the csv file
-        formula = row.iloc[3]  # gets the formula present in the 4th column
-        name = row.iloc[2]
+    # Create new columns for rotational constants
+    df['Rotational Constant 1'] = None
+    df['Rotational Constant 2'] = None
+    df['Rotational Constant 3'] = None
+    
+    # Iterate through the rows of the CSV file
+    for index, row in df.iterrows():
+        formula = row.iloc[3]  # Gets the formula present in the 4th column
+        name = row.iloc[2]     # Gets the name from the 3rd column
         
-        try: # it may not be possible to get the dipole moment from the server so we use "try"
-
-            dipole_moment = get_dipole_moment(formula, name) # call the get_dipole_moment function
+        try:
+            # Get rotational constants for this molecule
+            rotational_constants = get_rotational_constants(formula, name)
             
-            # check if dipole moment is above 0.5
-            if dipole_moment is None: # if the output of the dipole search is None
-                filtered_molecules_no_value.append(row) # append the row that was read to the now value array
-                filtered_molecules_joined.append(row) # appens the row that was read to the joined array
-                print(f"{formula}: Dipole Moment = {dipole_moment} - NONE PASSED") # notify the user that the molecule has passed the filter with NONE value
-            if dipole_moment is not None and dipole_moment >= 0.5: #  if the output value is bigger than 0.5
-                print(f"{formula}: Dipole Moment = {dipole_moment} - PASSED") # notify the user that the molecule has passed the filter
-                row_with_dipole = row.copy() # copies the current row
-                row_with_dipole["Dipole Moment"] = dipole_moment # adds the dipole moment value to the row
-                filtered_molecules_joined.append(row_with_dipole) # append the row that was read to the joined array
-                filtered_molecules_good.append(row_with_dipole) # append the row that was read to the good array
-            if dipole_moment is not None and dipole_moment <0.5: # if the output value is not bigger than 0.5
-                row_with_dipole = row.copy() # copies the current row
-                row_with_dipole["Dipole Moment"] = dipole_moment # appends the dipole moment value to the new row
-                print(f"{formula}: Dipole Moment = {dipole_moment} - FILTERED OUT") # notifify the user that the molecule has not passed the filter
-                filtered_molecules_discarted.append(row_with_dipole) # append the row to the discarted array
-            # add a delay to avoid overwhelming the server
+            if rotational_constants is not None:
+                # Store rotational constants in the DataFrame
+                df.at[index, 'Rotational Constant 1'] = rotational_constants[0]
+                df.at[index, 'Rotational Constant 2'] = rotational_constants[1]
+                if len(rotational_constants) > 2:  # In case there are 3 constants
+                    df.at[index, 'Rotational Constant 3'] = rotational_constants[2]
+                
+                print(f"Added rotational constants for {formula}: {rotational_constants}")
+            else:
+                print(f"No rotational constants found for {formula}")
+            
+            # Add a delay to avoid overwhelming the server
             time.sleep(delay)
-        
-        # in case it is not possible to call the function or if there is a network problem
+            
         except Exception as e:
             print(f"Error processing {formula}: {e}")
     
-    # create a new DataFrame with filtered molecules for each array
-    filtered_df_good = pd.DataFrame(filtered_molecules_good)
-    filtered_df_no_value = pd.DataFrame(filtered_molecules_no_value)
-    filtered_df_discarted = pd.DataFrame(filtered_molecules_discarted)
-    filtered_df_joined = pd.DataFrame(filtered_molecules_joined)
-    
-    # converts the dataframe to a csv false
-    # by default pandas assigns an integer index to each row when creating a dataframe which produces an extra column. Since we do not want that we set index to false
-    filtered_df_good.to_csv(output_csv_good, index=False) # by default pandas assigns an integer index to each row when creating a dataframe which produces an extra column. Since we do not want that we set index to false
-    filtered_df_no_value.to_csv(output_csv_no_value, index=False)
-    filtered_df_discarted.to_csv(output_csv_discarted, index=False)
-    filtered_df_joined.to_csv(output_csv_joined, index=False)
-    
-    # user notification
+    # Save the results to CSV
+    df.to_csv(output_csv, index=False)
+    print(f"Results saved to {output_csv}")
     print(f"Total molecules processed: {len(df)}")
-    print(f"Molecules passing filter: {len(filtered_molecules_good)}")
-    print(f"Molecules NOT passing filter: {len(filtered_molecules_discarted)}")
-    print(f"Molecules with no dipole moment found: {len(filtered_molecules_no_value)}")
+    print(f"Molecules with rotational constants: {df['Rotational Constant 1'].notna().sum()}")
 
-# calling the filter_molecules_by_dipole function
-filter_molecules_by_dipole("molecule_filter_TOC/no_symmetry_restriction/csv_files/filter0_properties_no_symmetry_no_duplicates.csv", 'molecule_filter_TOC/no_symmetry_restriction/csv_files/filter1_again_good.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_no_values.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_discarted.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_joined.csv')
+# Example usage:
+extract_rotational_constants_to_csv(
+    "molecule_filter_TOC/no_symmetry_restriction/csv_files/filter3_point_groups_filtered.csv",
+    "molecule_filter_TOC/no_symmetry_restriction/csv_files/filter4_rot_constants.csv"
+)

@@ -1,0 +1,69 @@
+﻿Frequency (cm-1),Name,Formula,mode number,Symmetry,IR Intensity,Raman Activity,Dipole Moment,Quadrupole Moment,Point Group,Rotational Constant 1,Rotational Constant 2,Rotational Constant 3,oblate/prolate
+1203,Lithium borohydride,LiBH4,3,A1,148.7,,6.307,10.26,C3v,4.203,0.754,0.754,prolate
+1205,monomethyl copper,CuCH3,2,A1,62.1,,3.525,1.046,C3v,5.472,0.344,0.344,prolate
+1237,Amminetrifluoroboron,NH3BF3,9,E,430.5,,6.17,9.912,C3v,0.166,0.157,0.157,prolate
+1240,"Acetonitrile, trifluoro-",CF3CN,2,A1,433.9,,1.495,-6.62,C3v,0.195,0.1,0.1,prolate
+1241,"Propane, 2-chloro-2-methyl-",CH3CCl(CH3)CH3,19,E,5.1,,2.589,-2.75,C3v,0.152,0.1,0.1,prolate
+1256,Phosphine oxide,H3PO,2,A1,322.8,,4.176,-3.822,C3v,3.616,0.59,0.59,prolate
+1272,"Ethane, 1,1,1-trifluoro-",CH3CF3,9,E,281.4,,2.262,2.793,C3v,0.188,0.176,0.176,prolate
+1333,methyl bromide,CH3Br,2,A1,46.5,,2.192,4.109,C3v,5.301,0.318,0.318,prolate
+1343,"Borane, methyloxo-",CH3BO,3,A1,15.6,,3.805,-5.244,C3v,5.404,0.266,0.266,prolate
+1356,thiomethoxy,CH3S,6,A,9.5,,1.751,1.781,C3v,5.382,0.443,0.443,prolate
+1368,sulfidoazane,NH3S,2,A1,76.8,,6.294,6.393,C3v,6.298,0.395,0.395,prolate
+1381,Phosphoryl fluoride,F3PO,1,A1,314.9,,1.959,-5.407,C3v,0.161,0.153,0.153,prolate
+1383,Methyl chloride,CH3Cl,2,A1,30.1,1.8,2.243,1.748,C3v,5.334,0.444,0.444,prolate
+1406,Acetonitrile,CH3CN,3,A1,0.6,8.1,4.042,-3.399,C3v,5.381,0.31,0.31,prolate
+1407,propyne,CH3CCH,4,A1,1.3,,0.638,5.807,C3v,5.417,0.288,0.288,prolate
+1444,methyl lithium,CH3Li,5,E,4.9,,5.72,10.658,C3v,5.472,0.741,0.741,prolate
+1444,methyl isocyanide,CH3NC,3,A1,13.9,,3.513,-3.045,C3v,5.375,0.34,0.34,prolate
+1488,Sodium methoxide,NaOCH3,6,E,5.8,,7.56,12.953,C3v,5.455,0.154,0.154,prolate
+1500,Ammonia Oxide,NH3O,2,A1,35.2,,5.61,-1.284,C3v,6.329,0.894,0.894,prolate
+1655,Ammonium chloride,NH4Cl,6,E,28.9,10.5,4.7,5.393,C3v,6.394,0.135,0.135,prolate
+1995,monofluorogermane,GeH3F,1,A1,25,221.3,2.141,-2.791,C3v,2.601,0.336,0.336,prolate
+2100,methyl chloride d3,CD3Cl,1,A1,25.1,,2.243,1.749,C3v,2.669,0.362,0.362,prolate
+2176,monofluorosilane,SiH3F,4,E,257.4,54.1,1.474,-1.142,C3v,2.877,0.479,0.479,prolate
+2182,bromosilane,SiH3Br,1,A1,95.4,,1.767,2.972,C3v,2.874,0.143,0.143,prolate
+2229,Borane carbonyl,BH3CO,2,A1,347.8,68.9,2.137,-4.962,C3v,4.059,0.277,0.277,prolate
+2311,borane phosphine,BH3PH3,2,A1,85.1,,4.539,-4.473,C3v,1.922,0.329,0.329,prolate
+1253,Nitrous oxide,N2O,2,Î£,164.9,5.7,0.701,-4.271,Câˆžv,0.436,,,
+1262,Phosphorus monoxide,PO,1,Î£,68.4,,2.592,-2.492,Câˆžv,0.754,,,
+1265,Silicon monoxide,SiO,1,Î£,89,15.7,3.251,-5.322,Câˆžv,0.749,,,
+1273,Lithium Hydride,LiH,1,Î£,192.5,,5.981,-1.471,Câˆžv,7.151,,,
+1284,Phosphorus oxide phosphide,PPO,1,Î£,274.4,,1.485,-6.382,Câˆžv,0.135,,,
+1310,boron monocarbide,BC,1,Î£,0.4,,2.331,-2.834,Câˆžv,1.428,,,
+1311,Titanium monohydride,TiH,1,Î£,383.3,,1.88,-13.097,Câˆžv,4.907,,,
+1323,Boron monofluoride,BF,1,Î£,174.6,3,0.878,-4.253,Câˆžv,1.522,,,
+1325,Phosphaethyne,HCP,2,Î£,4.8,,0.683,3.965,Câˆžv,0.69,,,
+1327,Chromium hydride,CrH,1,Î£,497.9,,1.617,-12.07,Câˆžv,5.175,,,
+1377,magnesium monohydride,MgH,1,Î£,277.6,,1.411,-8.821,Câˆžv,5.7,,,
+1428,Phosphorus mononitride,PN,1,Î£,0.2,34.7,2.921,-2.917,Câˆžv,0.826,,,
+1434,Zinc monohydride,ZnH,1,Î£,254.9,,0.858,-6.67,Câˆžv,6.41,,,
+1483,Scandium monohydride,ScH,1,Î£,341,,1.317,-5.584,Câˆžv,5.398,,,
+1565,beryllium oxide,BeO,1,Î£,107.8,,6.782,6.762,Câˆžv,1.742,,,
+1588,boron nitride,BN,1,Î£,26.8,,2.624,-0.921,Câˆžv,1.637,,,
+1603,Copper monohydride,CuH,1,Î£,420.3,,4.329,-2.246,Câˆžv,7.708,,,
+1628,Diazocarbene,CNN,1,Î£,0.7,141.4,0.801,-5.263,Câˆžv,0.439,,,
+1872,Mercapto-d,DS,1,Î£,8.2,,1.08,2.146,Câˆžv,5.029,,,
+1996,Dicarbon monoxide,CCO,1,Î£,368,,1.419,-7.513,Câˆžv,0.395,,,
+2054,Hydrochloric acid-d,DCl,1,Î£,12.5,,1.502,3.599,Câˆžv,5.52,,,
+2073,Aluminum isocyanide,AlNC,1,Î£,564.5,79.4,2.155,-10.796,Câˆžv,0.199,,,
+2076,hydrogen isocyanide,HNC,2,Î£,81.5,,2.833,1.743,Câˆžv,1.555,,,
+2109,Zinc isocyanide,ZnNC,1,Î£,363.6,,4.352,-12.744,Câˆžv,0.145,,,
+2147,Cyanoacetylene,HCCCN,3,Î£,3.4,,4.091,1.906,Câˆžv,0.154,,,
+2150,bromoacetylene,HCCBr,2,Î£,11.4,,0.588,9.218,Câˆžv,0.135,,,
+2169,Chloroacetylene,HCCCl,2,Î£,22,,0.842,7.488,Câˆžv,0.19,,,
+2192,Hydrogen cyanide,HCN,2,Î£,11.8,39.5,3.209,2.033,Câˆžv,1.534,,,
+2253,Aluminum monocyanide,AlCN,1,Î£,53.3,65.6,3.278,-12.539,Câˆžv,0.166,,,
+2258,Boron monohydride,BH,1,Î£,391.1,,1.493,-4.062,Câˆžv,12.155,,,
+2296,Selenium monohydride,HSe,1,Î£,24.4,172.1,0.728,2.606,Câˆžv,7.828,,,
+2325,Cyanogen bromide,BrCN,1,Î£,31.9,62.7,3.194,-5.753,Câˆžv,0.14,,,
+2338,Nitrogen sulfide,NNS,1,Î£,297,,1.322,0.953,Câˆžv,0.21,,,
+2339,chlorocyanogen,ClCN,1,Î£,49.4,,2.764,-4.18,Câˆžv,0.201,,,
+2423,Cyanogen fluoride,FCN,1,Î£,156.6,,1.803,-3.134,Câˆžv,0.364,,,
+2517,hydrogen bromide,HBr,1,Î£,8.7,,1.107,4.474,Câˆžv,8.41,,,
+2686,hydrogen boron sulfide,HBS,1,Î£,50,61.5,2.193,3.435,Câˆžv,0.64,,,
+2750,Methylidyne,CH,1,Î£,172.7,130.5,1.582,-1.269,Câˆžv,14.767,,,
+2865,Hydrogen chloride,HCl,1,Î£,24.3,126.3,1.502,3.599,Câˆžv,10.733,,,
+1436,Nitrogen trioxide,NO3,1,A1,227.3,,1.241,-1.86,D3h,0.478,0.459,0.234,
+2027,Iron pentacarbonyl,Fe(CO)5,14,E,5260.1,,2.817,0.628,D3h,0.028,0.028,0.023,
+1863,Boron dioxide,BO2,1,Î£,21.8,,1.826,-6.565,Dâˆžh,0.33,,,

@@ -1,14 +1,13 @@
 # import necessary libraries
 import requests # this is a library that allows to send HTTP requests to websites. Simulates what a browser does when fetching web content
 from bs4 import BeautifulSoup # from the bs4 module imports the class beautifulsoup. This is used to parse HTML or XML content and extract information from it
-import csv # this imports the csv module. It is used to read and write CSV files
 import pandas as pd # this imports the pandas library and it is giving it the alias pd that is used for data manipulation and analaysis
 import time # this imports the time module which is used to measure how long things run or to pause an execution
 
 
 # This function makes scraping to the CCCBDB database in order to get
-# the calculated dipole moment values
-def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
+# the calculated quadrupole moment values
+def get_quadrupole_moment(formula, name=None, max_retries=3, retry_delay=2):
     import time
     import requests
     from bs4 import BeautifulSoup
@@ -24,7 +23,7 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 'cache-control': 'max-age=0',
                 'content-type': 'application/x-www-form-urlencoded',
                 'origin': 'https://cccbdb.nist.gov',
-                'referer': 'https://cccbdb.nist.gov/dipole1x.asp',
+                'referer': 'https://cccbdb.nist.gov/quadrupole1x.asp',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
             }
             
@@ -32,7 +31,7 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
             session = requests.Session()
             
             # Initial page visit
-            session.get('https://cccbdb.nist.gov/dipole1x.asp')
+            session.get('https://cccbdb.nist.gov/quadrupole1x.asp')
             
             # Post the form data to search for the formula
             response = session.post(
@@ -60,8 +59,8 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
             selection_table = soup.find('table', {'border': '1'})
             selection_form = soup.find('form', {'action': 'gotonex.asp'})
             
-            # Check if we're already on the dipole data page
-            dipole_table = soup.find('table', id='table2')
+            # Check if we're already on the quadrupole data page
+            quadrupole_table = soup.find('table', id='table2')
             
             # Determine current page
             if selection_table and selection_form:
@@ -150,12 +149,12 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                     timeout=30
                 )
                 
-                # Now we should be at dipole2x.asp
+                # Now we should be at quadrupole2x.asp
                 soup = BeautifulSoup(response.text, 'html.parser')
                 
-            elif dipole_table:
-                print("Directly landed on dipole data page")
-                # We're already on the dipole data page, so no selection needed
+            elif quadrupole_table:
+                print("Directly landed on quadrupole data page")
+                # We're already on the quadrupole data page, so no selection needed
                 pass
             else:
                 print(f"Landed on unrecognized page on attempt {attempt}")
@@ -166,12 +165,16 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 else:
                     return None
             
-            # At this point, we should be on the dipole data page
+            # At this point, we should be on the quadrupole data page
+            # Get the quadrupole data
+            quadrupole_response = session.get(f'{base_url}/quadrupole2x.asp', headers=headers)
+            soup = BeautifulSoup(quadrupole_response.text, 'html.parser')
+            
             # Find table2 (in case we just refreshed the soup)
             table2 = soup.find('table', id='table2')
             
             if not table2:
-                print(f"Could not find dipole data table on attempt {attempt}")
+                print(f"Could not find quadrupole data table on attempt {attempt}")
                 if attempt < max_retries:
                     print(f"Retrying in {retry_delay} seconds...")
                     time.sleep(retry_delay)
@@ -198,12 +201,12 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
                 try:
                     value = float(hf_td.a.text.strip())
                     molecule_name = "unknown" if not 'selected_option' in locals() else selected_option['name']
-                    print(f"Dipole moment for {formula} ({molecule_name}): {value}")
+                    print(f"Quadrupole moment for {formula} ({molecule_name}): {value}")
                     return value
                 except ValueError:
                     print(f"Could not convert {hf_td.a.text} to float for {formula}")
             else:
-                print(f"Could not find dipole value for {formula}")
+                print(f"Could not find quadrupole value for {formula}")
             
             if attempt < max_retries:
                 print(f"Retrying in {retry_delay} seconds...")
@@ -225,7 +228,7 @@ def get_dipole_moment(formula, name=None, max_retries=3, retry_delay=2):
     return None
     
 
-def filter_molecules_by_dipole(input_csv, output_csv_good, output_csv_no_value, output_csv_discarted, output_csv_joined, delay=1): # function definition
+def filter_molecules_by_quadrupole(input_csv, output_csv_good, output_csv_no_value, output_csv_discarted, output_csv_joined, delay=1): # function definition
    
     # read the input CSV
     df = pd.read_csv(input_csv)
@@ -241,26 +244,26 @@ def filter_molecules_by_dipole(input_csv, output_csv_good, output_csv_no_value, 
         formula = row.iloc[3]  # gets the formula present in the 4th column
         name = row.iloc[2]
         
-        try: # it may not be possible to get the dipole moment from the server so we use "try"
+        try: # it may not be possible to get the quadrupole moment from the server so we use "try"
 
-            dipole_moment = get_dipole_moment(formula, name) # call the get_dipole_moment function
+            quadrupole_moment = get_quadrupole_moment(formula, name) # call the get_quadrupole_moment function
             
-            # check if dipole moment is above 0.5
-            if dipole_moment is None: # if the output of the dipole search is None
+            # check if quadrupole moment is above 0.5
+            if quadrupole_moment is None: # if the output of the quadrupole search is None
                 filtered_molecules_no_value.append(row) # append the row that was read to the now value array
                 filtered_molecules_joined.append(row) # appens the row that was read to the joined array
-                print(f"{formula}: Dipole Moment = {dipole_moment} - NONE PASSED") # notify the user that the molecule has passed the filter with NONE value
-            if dipole_moment is not None and dipole_moment >= 0.5: #  if the output value is bigger than 0.5
-                print(f"{formula}: Dipole Moment = {dipole_moment} - PASSED") # notify the user that the molecule has passed the filter
-                row_with_dipole = row.copy() # copies the current row
-                row_with_dipole["Dipole Moment"] = dipole_moment # adds the dipole moment value to the row
-                filtered_molecules_joined.append(row_with_dipole) # append the row that was read to the joined array
-                filtered_molecules_good.append(row_with_dipole) # append the row that was read to the good array
-            if dipole_moment is not None and dipole_moment <0.5: # if the output value is not bigger than 0.5
-                row_with_dipole = row.copy() # copies the current row
-                row_with_dipole["Dipole Moment"] = dipole_moment # appends the dipole moment value to the new row
-                print(f"{formula}: Dipole Moment = {dipole_moment} - FILTERED OUT") # notifify the user that the molecule has not passed the filter
-                filtered_molecules_discarted.append(row_with_dipole) # append the row to the discarted array
+                print(f"{formula}: Quadrupole Moment = {quadrupole_moment} - NONE PASSED") # notify the user that the molecule has passed the filter with NONE value
+            if quadrupole_moment is not None and abs(quadrupole_moment) >= 0.5: #  if the output value is bigger than 0.5
+                print(f"{formula}: Quadrupole Moment = {quadrupole_moment} - PASSED") # notify the user that the molecule has passed the filter
+                row_with_quadrupole = row.copy() # copies the current row
+                row_with_quadrupole["Quadrupole Moment"] = quadrupole_moment # adds the quadrupole moment value to the row
+                filtered_molecules_joined.append(row_with_quadrupole) # append the row that was read to the joined array
+                filtered_molecules_good.append(row_with_quadrupole) # append the row that was read to the good array
+            if quadrupole_moment is not None and abs(quadrupole_moment) < 0.5: # if the output value is not bigger than 0.5
+                row_with_quadrupole = row.copy() # copies the current row
+                row_with_quadrupole["Quadrupole Moment"] = quadrupole_moment # appends the quadrupole moment value to the new row
+                print(f"{formula}: Quadrupole Moment = {quadrupole_moment} - FILTERED OUT") # notifify the user that the molecule has not passed the filter
+                filtered_molecules_discarted.append(row_with_quadrupole) # append the row to the discarted array
             # add a delay to avoid overwhelming the server
             time.sleep(delay)
         
@@ -285,7 +288,7 @@ def filter_molecules_by_dipole(input_csv, output_csv_good, output_csv_no_value, 
     print(f"Total molecules processed: {len(df)}")
     print(f"Molecules passing filter: {len(filtered_molecules_good)}")
     print(f"Molecules NOT passing filter: {len(filtered_molecules_discarted)}")
-    print(f"Molecules with no dipole moment found: {len(filtered_molecules_no_value)}")
+    print(f"Molecules with no quadrupole moment found: {len(filtered_molecules_no_value)}")
 
-# calling the filter_molecules_by_dipole function
-filter_molecules_by_dipole("molecule_filter_TOC/no_symmetry_restriction/csv_files/filter0_properties_no_symmetry_no_duplicates.csv", 'molecule_filter_TOC/no_symmetry_restriction/csv_files/filter1_again_good.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_no_values.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_discarted.csv', 'molecule_filter_TOC/no_symmetry_restriction/filter1_again_joined.csv')
+# calling the filter_molecules_by_quadrupole function
+filter_molecules_by_quadrupole("molecule_filter_TOC/no_symmetry_restriction/csv_files/filter2_again_no_values.csv", 'molecule_filter_TOC/no_symmetry_restriction/csv_files/filter2_again_good2.csv', 'molecule_filter_TOC/no_symmetry_restriction/csv_files/filter2_again_no_values_2.csv', 'molecule_filter_TOC/no_symmetry_restriction/csv_files/filter2_again_discarted2.csv', 'molecule_filter_TOC/no_symmetry_restriction/csv_files/filter2_again_joined2.csv')

@@ -159,8 +159,8 @@ def search_point_group(input_file, input_database, output_csv):
         writer_output.writerows(output_rows)  # Write all rows at once           
 
 if __name__ == "__main__":
-    input_file_name = "molecule_filter_TOC/no_symmetry_restriction/csv_files/filter3_atoms_5_10.csv"
+    input_file_name = "molecule_filter_TOC/no_symmetry_restriction/csv_files/filter2_again_good_completed.csv"
     input_database_file_name = "molecule_filter_TOC/no_symmetry_restriction/csv_files/all_point_groups.csv"
-    output_file_name = "molecule_filter_TOC/no_symmetry_restriction/csv_files/filter3_atoms_5_10_point_groups.csv"
+    output_file_name = "molecule_filter_TOC/no_symmetry_restriction/csv_files/filter3_point_groups.csv"
     search_point_group(input_file_name, input_database_file_name, output_file_name)
 

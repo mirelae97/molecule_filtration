@@ -1,0 +1,13 @@
+Candidate #,Frequency (cm-1),Name,Formula,mode number,Symmetry,IR Intensity,Raman Activity
+93,1209,Furazan,C2H2N2O,13,B2,2.6,1
+104,1210,Coronene,C24H12,4,A1g,0,
+115,1211,Pyrene,C16H10,8,Ag,0,
+149,1215,"1,3-Dioxolane",C3H6O2,8,A,85.1,
+150,1215,Uracil,C4H4N2O2,12,A',13.9,
+153,1215,Octane,C8H18,29,Au,0,
+458,1242,(Z)-1-Chloro-2-fluoroethene,CHFCHClz,5,A',39,
+485,1244,nitramide,NH2NO2,10,"A""",105.4,not available for 6.31G DF
+5186,1652,Ammonia Dimer,NH3NH3,16,Bu,30.7,
+5622,1882,Hydrogen sulfide-d2,D2S,1,A1,4.1,
+5632,1894,beryllium dihydride,BeH2,1,Σg,0,
+5638,1905,Nitrosyl fluoride,FNO,1,A',207.9,12.7
