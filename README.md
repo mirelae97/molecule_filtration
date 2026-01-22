@@ -1,10 +1,112 @@
-This code is used to filter a list of molecules in html format based on their dipole moment, quadrupole moment, number of atoms and melting temperature. A total of 5 filters are applied: 
-1. Filter0 --> removes ions, dimers, trimers and tetramers from the originally html file and returns the output as csv. Since the html file contains vibrations and not molecules, the duplicated names are removed as well
-3. Filter1 --> filters molecules by dipole moment
-4. Filter2 --> filters molecules by quadrupole moment
-5. Filter3 --> filter molecules by the number of atoms
-6. Filter4 --> filter molecules by their melting temperature present in wikipedia
+MOLECULE FILTRATION
 
 
-You can get the code by: 
-git clone https://https://github.com/mirelae97/molecule_filtration
+
+Python scripts for filtering and analysing molecular datasets. 
+
+The workflow processes vibrational data and selects molecules based on symmetry, dipole, and quadrupole moments.
+
+
+
+---------------------------------------------------------------
+
+SCRIPTS OVERVIEW
+
+
+
+Script                               Purpose
+
+------                               -------
+
+html\_to\_csv.py                        Converts raw vibrational data from HTML to CSV.
+
+filter\_for\_ions\_and\_radicals.py       Removes ions, radicals, dimers, and trimers. 
+
+&nbsp;                                     Assumes a column exists indicating charge or ionic nature 
+
+&nbsp;                                     and checks molecule names for "dimer" or "trimer".
+
+remove\_doubled\_formulas.py            Keeps only one vibration per molecule by checking chemical formulas 
+
+&nbsp;                                     and retaining the first occurrence.
+
+get\_point\_group\_from\_cccbdb.py        Parses the NIST CCCBDB website to obtain the point group 
+
+&nbsp;                                     of molecules listed in an input CSV file.
+
+filter\_point\_group.py                 Filters molecules in a CSV file based on their point group.
+
+rotational\_constant.py                Parses the NIST CCCBDB website to obtain rotational constants 
+
+&nbsp;                                     of molecules in an input CSV file.
+
+prolate\_oblate\_check.py               Classifies molecules as prolate, oblate, or linear based on the 
+
+&nbsp;                                     number and values of their rotational constants.
+
+filter\_dipole.py                      Parses the NIST CCCBDB website to obtain dipole moments 
+
+&nbsp;                                     and filters molecules based on dipole values.
+
+fraction\_calculator.py                Calculates the fraction (dipole^2 / rotational constant) 
+
+&nbsp;                                     for molecules that have both values.
+
+filter\_quadrupole.py                  Parses the NIST CCCBDB website to obtain quadrupole moments 
+
+&nbsp;                                     and filters molecules based on quadrupole values.
+
+
+
+---------------------------------------------------------------
+
+REQUIREMENTS
+
+
+
+Python: 3.9+ recommended
+
+Ensure pip is installed
+
+
+
+Python Libraries:
+
+
+
+Library                Purpose                                  Install
+
+-------                -------                                  -------
+
+pandas                 Reading/writing CSV files, DataFrame     pip install pandas
+
+&nbsp;                      operations
+
+numpy                  Numerical computations                   pip install numpy
+
+requests               Sending HTTP requests for web scraping  pip install requests
+
+beautifulsoup4         Parsing HTML pages                       pip install beautifulsoup4
+
+lxml / html5lib        Recommended HTML parser for BeautifulSoup pip install lxml html5lib
+
+re                     Regular expressions (built-in)          -
+
+time                   Delays between requests (built-in)      -
+
+csv                    Reading/writing CSV files (built-in)    -
+
+os                     File system path handling (built-in)    -
+
+
+
+---------------------------------------------------------------
+
+NOTES
+
+
+
+\- All web scraping scripts rely on CCCBDB/NIST database pages. Internet access is required.
+
+
+
